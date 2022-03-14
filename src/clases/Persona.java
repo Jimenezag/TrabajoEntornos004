@@ -55,7 +55,8 @@ public class Persona {
 //Método que realiza la diferencia entre la fecha actual y la fecha de	nacimiento de la persona para obtener su edad
 
 	public Integer obtenerEdad() {
-		return new Date().toInstant().atZone(ZoneId.systemDefault()).toLocalDate().getYear()
+		int year = new Date().toInstant().atZone(ZoneId.systemDefault()).toLocalDate().getYear();
+		return year
 				- fecha_nacimiento.toInstant().atZone(ZoneId.systemDefault()).toLocalDate().getYear();
 	}
 
